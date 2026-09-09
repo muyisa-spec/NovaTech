@@ -2,11 +2,13 @@ databases:
   - name: novatech-db
     databaseName: novatech
     user: novatech
+    plan: free
 
 services:
   - type: web
     name: novatech-web
     runtime: python
+    plan: free
     buildCommand: pip install -r requirements.txt && python manage.py collectstatic --noinput && python manage.py migrate
     startCommand: gunicorn config.wsgi:application
     envVars:
