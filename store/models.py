@@ -23,6 +23,7 @@ class Product(models.Model):
     price = models.DecimalField("prix", max_digits=10, decimal_places=2)
     currency = models.CharField("devise", max_length=8, default="$")
     image = models.ImageField("image", upload_to="products/", blank=True)
+    image_url = models.URLField("URL de l'image", blank=True)
     stock = models.PositiveIntegerField("stock", default=0)
     chariow_product_id = models.CharField("identifiant produit Chariow", max_length=100, blank=True)
     chariow_payment_url = models.URLField("lien de paiement Chariow", blank=True)
@@ -51,6 +52,7 @@ class SiteProfile(models.Model):
         default="Fondateur de NovaTech, passionné par la formation digitale et l'accompagnement des entrepreneurs vers l'autonomie numérique.",
     )
     photo = models.ImageField("photo du fondateur", upload_to="about/", blank=True)
+    photo_url = models.URLField("URL de la photo", blank=True)
 
     class Meta:
         verbose_name = "profil public"
