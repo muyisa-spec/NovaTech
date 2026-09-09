@@ -1,0 +1,1 @@
+{% extends 'base.html' %}{% block content %}<section class="success"><h1>Merci pour votre commande !</h1><p>La commande <strong>#{{ order.id }}</strong> a été enregistrée. Nous vous contacterons à l’adresse {{ order.email }}.</p><a class="button" href="{% url 'home' %}">Retour au catalogue</a></section>{% endblock %}

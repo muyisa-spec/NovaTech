@@ -1,0 +1,45 @@
+[
+  {
+    "model": "store.category",
+    "pk": 1,
+    "fields": {"name": "Créativité", "slug": "creativite"}
+  },
+  {
+    "model": "store.category",
+    "pk": 2,
+    "fields": {"name": "Productivité", "slug": "productivite"}
+  },
+  {
+    "model": "store.product",
+    "pk": 1,
+    "fields": {
+      "category": 1, "name": "Masterclass Créative", "slug": "masterclass-creative",
+      "description": "Une formation concise pour transformer vos idées en projets concrets.",
+      "price": "29.00", "image": "", "stock": 99, "is_active": true,
+      "chariow_product_id": "prd_4flawwm4", "chariow_payment_url": "https://sbbsojae.mychariow.shop/prd_4flawwm4/checkout",
+      "created_at": "2026-09-09T12:00:00Z", "updated_at": "2026-09-09T12:00:00Z"
+    }
+  },
+  {
+    "model": "store.product",
+    "pk": 2,
+    "fields": {
+      "category": 2, "name": "Focus & Productivité", "slug": "focus-productivite",
+      "description": "Des méthodes simples pour organiser vos journées et préserver votre énergie.",
+      "price": "19.00", "image": "", "stock": 99, "is_active": true,
+      "chariow_product_id": "", "chariow_payment_url": "",
+      "created_at": "2026-09-09T12:00:00Z", "updated_at": "2026-09-09T12:00:00Z"
+    }
+  },
+  {
+    "model": "store.product",
+    "pk": 3,
+    "fields": {
+      "category": 1, "name": "Boîte à outils digitale", "slug": "boite-outils-digitale",
+      "description": "Une sélection de ressources pratiques pour donner de l'élan à vos projets.",
+      "price": "39.00", "image": "", "stock": 99, "is_active": true,
+      "chariow_product_id": "", "chariow_payment_url": "",
+      "created_at": "2026-09-09T12:00:00Z", "updated_at": "2026-09-09T12:00:00Z"
+    }
+  }
+]

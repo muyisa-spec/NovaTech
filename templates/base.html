@@ -1,0 +1,24 @@
+{% load static %}
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#121b3c">
+  <title>{% block title %}NovaTech{% endblock %}</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'css/site.css' %}">
+</head>
+<body>
+  <header class="site-header"><div class="header-inner">
+    <a class="brand" href="{% url 'home' %}"><span class="brand-mark">N</span><span>Nova<span>Tech</span></span></a>
+    <nav class="main-nav" aria-label="Navigation principale">
+      <a href="{% url 'home' %}">Catalogue</a><a href="{% url 'about' %}">À propos</a><a href="{% url 'cart' %}">Panier</a>
+      {% if user.is_authenticated %}<a href="{% url 'account' %}">Mes achats</a><form method="post" action="{% url 'logout' %}">{% csrf_token %}<button class="nav-logout">Déconnexion</button></form>{% else %}<a class="nav-login" href="{% url 'login' %}">Connexion</a>{% endif %}
+    </nav>
+  </div></header>
+  <main class="site-main">{% for message in messages %}<p class="message {{ message.tags }}">{{ message }}</p>{% endfor %}{% block content %}{% endblock %}</main>
+  <footer class="site-footer"><div class="footer-identity"><a class="brand footer-brand" href="{% url 'home' %}"><span class="brand-mark">N</span><span>Nova<span>Tech</span></span></a><p>NovaTech © {% now "Y" %}</p></div><address class="footer-contact"><span>Contact : Muyisa Christian</span><a href="tel:0978401210">Téléphone : 0978401210</a><a href="mailto:muyisachristian7@gmail.com">Email : muyisachristian7@gmail.com</a></address></footer>
+</body></html>

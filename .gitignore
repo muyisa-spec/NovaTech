@@ -1,0 +1,18 @@
+# Python / Django
+__pycache__/
+*.py[cod]
+*.sqlite3
+.venv/
+venv/
+
+# Secrets and local configuration
+.env
+
+# User-uploaded files
+media/
+
+# Tools and operating system
+.vscode/
+.idea/
+Thumbs.db
+*-installer.exe

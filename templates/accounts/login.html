@@ -1,0 +1,1 @@
+{% extends 'base.html' %}{% block content %}<h1>Connexion</h1><form method="post" class="form">{% csrf_token %}{{ form.as_p }}<button>Se connecter</button></form><p><a href="{% url 'password_reset' %}">Mot de passe oublié ?</a></p><p>Pas encore de compte ? Vous pouvez acheter sans compte : il sera créé après votre premier paiement.</p>{% endblock %}
