@@ -19,7 +19,6 @@ def about(request):
         defaults={
             "founder_name": "Muyisa Christian",
             "bio": "Fondateur de NovaTech, passionné par la formation digitale et l'accompagnement des entrepreneurs vers l'autonomie numérique.",
-            "photo": "about/fondateur.jpg",
         },
     )
     return render(request, "store/about.html", {"profile": profile})
